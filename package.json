@@ -1,0 +1,17 @@
+{
+  "name": "python",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker run --name python -p 8888:8888 -v $PWD/python:/opt/notebooks -d python",
+    "stop": "docker rm -f python",
+    "active": "docker ps -a",
+    "build": "docker build -t python .",
+    "rm": "docker image rm -f python",
+    "list": "docker images"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
